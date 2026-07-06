@@ -12,10 +12,18 @@ namespace CleanArchitecture;
  */
 class Aluno
 {
+    /** @var Telefone[] */
+    private array $telefones = [];
+
     public function __construct(
         private CPF $cpf,
         private Email $email,
         private string $nome
     )
     {}
+
+    public function addTelefone(string $ddd, string $numero): void
+    {
+        $this->telefones[] = new Telefone($ddd, $numero);
+    }
 }
