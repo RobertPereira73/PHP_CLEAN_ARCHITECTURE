@@ -1,0 +1,15 @@
+{
+    "autoload": {
+        "psr-4": {
+            "CleanArchitecture\\": "src/" 
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "CleanArchitecture\\Testes\\": "testes/" 
+        }
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^9.1"
+    }
+}
