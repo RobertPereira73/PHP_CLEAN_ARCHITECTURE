@@ -2,12 +2,9 @@
 
 require 'vendor/autoload.php';
 
-use CleanArchitecture\{Aluno, CPF, Email};
+use CleanArchitecture\Dominio\Aluno\Aluno;
+use CleanArchitecture\Dominio\Instrutor\Instrutor;
 
-$cpf = new CPF('49974396816');
-$email = new Email('robertpereira611@gmail.com');
-$aluno = new Aluno($cpf, $email, 'Robert');
-
-$aluno->addTelefone('12', '981715420');
+$aluno = Aluno::comCPFEmailENome('49974396816', 'robert@gmail.com', 'ROBERT');
 
 var_dump($aluno);

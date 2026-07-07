@@ -1,6 +1,6 @@
 <?php
 
-namespace CleanArchitecture;
+namespace CleanArchitecture\Dominio;
 
 use Stringable;
 

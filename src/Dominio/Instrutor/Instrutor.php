@@ -1,9 +1,9 @@
 <?php
 
-namespace CleanArchitecture\Aluno;
+namespace CleanArchitecture\Dominio\Instrutor;
 
-use CleanArchitecture\CPF;
-use CleanArchitecture\Email;
+use CleanArchitecture\Dominio\CPF;
+use CleanArchitecture\Dominio\Email;
 
 /**
  * ENTIDADE
@@ -13,11 +13,8 @@ use CleanArchitecture\Email;
  * Exemplo:
  * Alunos com o mesmo nome, em uma aplicacao de escola, precisam ser diferenciados pelo CPF.
  */
-class Aluno
+class Instrutor
 {
-    /** @var Telefone[] */
-    private array $telefones = [];
-
     /**
      * NAMED CONSTRUCTOR
      * Utilizado para facilitar a criacao de objetos
@@ -27,7 +24,7 @@ class Aluno
         $cpf = new CPF($cpf);
         $email = new Email($email);
 
-        return new Aluno($cpf, $email, $nome);
+        return new Instrutor($cpf, $email, $nome);
     } 
 
     public function __construct(
@@ -36,11 +33,4 @@ class Aluno
         private string $nome
     )
     {}
-
-    public function addTelefone(string $ddd, string $numero): self
-    {
-        $this->telefones[] = new Telefone($ddd, $numero);
-
-        return $this;
-    }
 }

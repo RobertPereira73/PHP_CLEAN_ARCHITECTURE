@@ -1,8 +1,8 @@
 <?php
 
-namespace CleanArchitecture\Indicacao;
+namespace CleanArchitecture\Dominio\Indicacao;
 
-use CleanArchitecture\Aluno\Aluno;
+use CleanArchitecture\Dominio\Aluno\Aluno;
 
 /**
  * ENTIDADE

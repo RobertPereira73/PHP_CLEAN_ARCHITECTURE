@@ -2,7 +2,7 @@
 
 namespace CleanArchitecture\Testes;
 
-use CleanArchitecture\Email;
+use CleanArchitecture\Dominio\Email;
 use PHPUnit\Framework\TestCase;
 
 class EmailTest extends TestCase

@@ -1,6 +1,6 @@
 <?php
 
-namespace CleanArchitecture\Aluno;
+namespace CleanArchitecture\Dominio\Aluno;
 
 use Stringable;
 
