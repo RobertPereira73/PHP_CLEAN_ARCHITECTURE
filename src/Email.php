@@ -7,6 +7,9 @@ use Stringable;
 /**
  * Value Object
  * Value Objects representam entidades que nao precisam de uma diferenciacao explicita por chave.
+ * Uma forma de diferenciar Value Objects e quanto o atributo tem uma regra de negocio propria para o valor. 
+ * Exemplo:
+ * Um Email deve conter um @ e dominio para ser valido.
  * 
  * Exemplo:
  * Emails iguais representam a mesma instancia. Ou seja, dois emails identicos representam o mesmo email

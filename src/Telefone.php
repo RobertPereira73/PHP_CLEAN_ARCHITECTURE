@@ -7,6 +7,9 @@ use Stringable;
 /**
  * Value Object
  * Value Objects representam entidades que nao precisam de uma diferenciacao explicita por chave.
+ * Uma forma de diferenciar Value Objects e quanto o atributo tem uma regra de negocio propria para o valor. 
+ * Exemplo:
+ * Um Telefone deve conter um DDD com 2 caracteres, e um numero de telefone entre 8 e 9 caracteres para ser valido.
  * 
  * Exemplo:
  * Telefones iguais representam a mesma instancia. Ou seja, dois Telefones identicos representam o mesmo Telefones
