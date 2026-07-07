@@ -1,6 +1,9 @@
 <?php
 
-namespace CleanArchitecture;
+namespace CleanArchitecture\Aluno;
+
+use CleanArchitecture\CPF;
+use CleanArchitecture\Email;
 
 /**
  * ENTIDADE
@@ -15,6 +18,18 @@ class Aluno
     /** @var Telefone[] */
     private array $telefones = [];
 
+    /**
+     * NAMED CONSTRUCTOR
+     * Utilizado para facilitar a criacao de objetos
+     */
+    public static function comCPFEmailENome(string $cpf, string $email, string $nome): self
+    {
+        $cpf = new CPF($cpf);
+        $email = new Email($email);
+
+        return new Aluno($cpf, $email, $nome);
+    } 
+
     public function __construct(
         private CPF $cpf,
         private Email $email,
@@ -22,8 +37,10 @@ class Aluno
     )
     {}
 
-    public function addTelefone(string $ddd, string $numero): void
+    public function addTelefone(string $ddd, string $numero): self
     {
         $this->telefones[] = new Telefone($ddd, $numero);
+
+        return $this;
     }
 }
