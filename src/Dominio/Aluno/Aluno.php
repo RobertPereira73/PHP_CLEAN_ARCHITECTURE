@@ -43,4 +43,27 @@ class Aluno
 
         return $this;
     }
+
+    public function getCPF(): string
+    {
+        return $this->cpf;
+    }
+
+    public function getEmail(): string
+    {
+        return $this->email;
+    }
+
+    public function getNome(): string
+    {
+        return $this->nome;
+    }
+
+    /**
+     * @return Telefone[]
+     */
+    public function getTelefones(): array
+    {
+        return $this->telefones;
+    }
 }

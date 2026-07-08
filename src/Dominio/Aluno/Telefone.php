@@ -29,6 +29,11 @@ class Telefone implements Stringable
         $this->setNumero($numero);
     }
 
+    public function __toString(): string
+    {
+        return $this->ddd . ' ' . $this->numero;
+    }
+
     public function setDDD(string $ddd): void
     {
         if (strlen($ddd) !== 2) {
@@ -47,8 +52,13 @@ class Telefone implements Stringable
         $this->numero = $numero;
     }
 
-    public function __toString(): string
+    public function getDDD(): string
     {
-        return $this->ddd . ' ' . $this->numero;
+        return $this->ddd;
+    }
+
+    public function getNumero(): string
+    {
+        return $this->numero;
     }
 }
