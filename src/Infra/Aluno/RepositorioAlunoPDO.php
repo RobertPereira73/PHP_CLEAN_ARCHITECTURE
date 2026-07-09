@@ -6,6 +6,12 @@ use CleanArchitecture\Dominio\Aluno\{Aluno, AlunoNaoEncontradoException, Telefon
 use CleanArchitecture\Dominio\Aluno\RepositorioAluno;
 use CleanArchitecture\Dominio\CPF;
 
+/**
+ * Servico de infraestrutura para repositorio
+ * 
+ * implementa o repositorio de um DOMINIO, e tambem a forma como os dados vao ser persistidos,
+ * dependendo de contextos externos como bancos de dados ou colecoes para salvar ou recuperar informacoes.
+ */
 class RepositorioAlunoPDO implements RepositorioAluno
 {
     private function __construct(
