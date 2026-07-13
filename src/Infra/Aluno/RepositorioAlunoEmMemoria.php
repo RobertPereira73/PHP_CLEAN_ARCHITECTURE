@@ -5,10 +5,8 @@ namespace CleanArchitecture\Infra\Aluno;
 use CleanArchitecture\Dominio\Aluno\{Aluno, AlunoNaoEncontradoException, Telefone};
 use CleanArchitecture\Dominio\Aluno\RepositorioAluno;
 use CleanArchitecture\Dominio\CPF;
-use Exception;
-use Override;
 
-class RepositorioAlunoPDO implements RepositorioAluno
+class RepositorioAlunoEmMemoria implements RepositorioAluno
 {
     /** @var Aluno[] $alunos */
     private array $alunos = [];
